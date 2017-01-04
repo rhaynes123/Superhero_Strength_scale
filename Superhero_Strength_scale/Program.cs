@@ -27,7 +27,11 @@ namespace Superhero_Strength_scale
 			//This cycle of statements lists out the speed level of a character
 			Console.WriteLine("How fast can you run?");
 			MeasuredHero.speedlimit = Convert.ToInt32(Console.ReadLine());
-			if (MeasuredHero.speedlimit < 768) 
+			if (MeasuredHero.speedlimit < 28)
+				Console.WriteLine("Poor: 1");
+			if (MeasuredHero.speedlimit == 28)
+				Console.WriteLine("Normal: 2");
+			if (MeasuredHero.speedlimit> 40 && MeasuredHero.speedlimit < 768) 
 				Console.WriteLine("Subsonic: 3");
 			if (MeasuredHero.speedlimit >= 768 && MeasuredHero.speedlimit <= 1536)
 				Console.WriteLine("Supersonic Speedster: 4");
@@ -41,6 +45,7 @@ namespace Superhero_Strength_scale
 			
 			//This cycle will be in regards to the damage a hero can take
 			Console.WriteLine("How well do you handle taking damage?");
+			Console.WriteLine("Poor, Normal, Above Human, Regenerative, Bulletproof, Above Superhuman, Nearly Indestructible?");
 			MeasuredHero.damagelimit = Console.ReadLine();
 			if (MeasuredHero.damagelimit == "Poor")
 				Console.WriteLine("Poor: 1");
@@ -60,6 +65,7 @@ namespace Superhero_Strength_scale
 
 			//This cycle is for intelligence
 			Console.WriteLine("How smart is the hero");
+			Console.WriteLine("Impaired, Normal, Educated, Gifted, Genius, Super Genius, Omniscient?");
 			MeasuredHero.intellectlevel = Console.ReadLine();
 			if (MeasuredHero.intellectlevel == "Impaired")
 				Console.WriteLine("Impaired: 1");
@@ -79,6 +85,7 @@ namespace Superhero_Strength_scale
 
 			//This cycle is for combative fighting skill
 			Console.WriteLine("How well can you fight?");
+			Console.WriteLine("Poor, Normal, Street Fighter, Experienced Fighter, Martial Arts Master, Martial Arts Grand Master, Omniscient Combatant?");
 			MeasuredHero.martialskill = Console.ReadLine();
 			if (MeasuredHero.martialskill == "Poor")
 				Console.WriteLine("Poor: 1");
@@ -94,6 +101,25 @@ namespace Superhero_Strength_scale
 				Console.WriteLine("Master of several parituclar form of combat with centuries worth of combat prowess : 6");
 			if (MeasuredHero.martialskill == "Omniscient Combatant")
 				Console.WriteLine(" Master of all forms of combat accross the whole of eternity : 7");
+
+			//This cycle is for combative fighting skill
+			Console.WriteLine("Do you have the ability to manipluate or discharge some form of energy?");
+			Console.WriteLine("No, On Contact, Somewhat, Moderately,Fairly Well, Expertly,Godlike? ");
+			MeasuredHero.energrycontrol = Console.ReadLine();
+			if (MeasuredHero.energrycontrol == "No")
+				Console.WriteLine("None: 1");
+			if (MeasuredHero.energrycontrol == "On Contact")
+				Console.WriteLine("Tactical Energy Discharge: 2");
+			if (MeasuredHero.energrycontrol == "Somewhat")
+				Console.WriteLine("Short range and duration of a single energy type: 3");
+			if (MeasuredHero.energrycontrol == "Moderately ")
+				Console.WriteLine("Medium range and duration of s singgle energy type : 4");
+			if (MeasuredHero.energrycontrol == "Fairly Well")
+				Console.WriteLine("Long range and duration of a single energy type: 5");
+			if (MeasuredHero.energrycontrol == "Expertly ")
+				Console.WriteLine("Multiple forms of energy with long ranges and durations : 6");
+			if (MeasuredHero.energrycontrol == "Godlike")
+				Console.WriteLine(" Unlimited control over all forms of energy and matter : 7");
 			
 			Console.WriteLine("Press Enter to Exit");
 			Console.ReadKey();//This is only needed on none Apple devices to keep the app running 
